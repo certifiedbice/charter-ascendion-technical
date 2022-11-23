@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "18"
+dist: hydrogen
+sudo: required
+branches:
+  only:
+  - main
+  before_script:
+  - npm install -g @angular/cli
+  script:
+- ng lint
+- ng build --prod --base-href https://github.com/certifiedbice/charter-ascendion-technical

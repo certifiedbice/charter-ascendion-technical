@@ -1,0 +1,99 @@
+{
+	"root": true,
+	"ignorePatterns": ["projects/**/*"],
+	"overrides": [
+		{
+			"files": ["*.ts"],
+			"env": {
+				"es6": true,
+				"browser": true,
+				"jest": true
+			},
+			"globals": {
+				"localStorage": true,
+				"fetch": true
+			},
+			"parserOptions": {
+				"project": ["**/tsconfig.json", "**/e2e/tsconfig.json"],
+				"ecmaVersion": "latest",
+				"createDefaultProgram": true,
+				"tsconfigRootDir": "__dirname"
+			},
+			"extends": [
+				"plugin:@angular-eslint/recommended",
+				"plugin:@angular-eslint/template/process-inline-templates",
+				"plugin:prettier/recommended"
+			],
+			"rules": {
+				"@angular-eslint/component-selector": [
+					"error",
+					{
+						"prefix": "",
+						"style": "kebab-case",
+						"type": "element"
+					}
+				],
+				"@angular-eslint/component-class-suffix": [
+					"error",
+					{
+						"suffixes": [
+							"Atom",
+							"Molecule",
+							"Organism",
+							"Page",
+							"Component"
+						]
+					}
+				],
+				"@angular-eslint/directive-selector": [
+					"error",
+					{
+						"prefix": "app",
+						"style": "camelCase",
+						"type": "attribute"
+					}
+				],
+				"@angular-eslint/no-empty-lifecycle-method": "off",
+				"@typescript-eslint/no-non-null-assertion": "off",
+				"no-console": "off",
+				"component-class-suffix": 0,
+				"prettier/prettier": [
+					"error",
+					{
+						"endOfLine": "auto",
+						"useTabs": true,
+						"tabWidth": 4,
+						"singleQuote": true
+					}
+				]
+			}
+		},
+		{
+			"files": ["*.html"],
+			"extends": ["plugin:@angular-eslint/template/recommended"],
+			"rules": {}
+		},
+		{
+			"files": ["*.html"],
+			"excludedFiles": ["*inline-template-*.component.html"],
+			"extends": [
+				"plugin:@angular-eslint/template/process-inline-templates",
+				"plugin:@angular-eslint/template/recommended",
+				"plugin:prettier/recommended"
+			],
+			"rules": {
+				"prettier/prettier": [
+					"error",
+					{
+						"parser": "html",
+						"printWidth": 120,
+						"endOfLine": "auto",
+						"useTabs": true,
+						"tabWidth": 4,
+						"singleQuote": true
+					}
+				]
+			}
+		}
+	]
+}

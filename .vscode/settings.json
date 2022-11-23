@@ -1,0 +1,29 @@
+{
+	"eslint.options": {
+		"extensions": [".ts", ".html"]
+	},
+	"eslint.probe": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"markdown"
+	],
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"editor.hover.delay": 600,
+	"editor.tabCompletion": "on",
+	"editor.detectIndentation": false,
+	"editor.acceptSuggestionOnEnter": "off",
+	"editor.comments.ignoreEmptyLines": false,
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 4,
+	"prettier.singleQuote": true,
+	"prettier.semi": true,
+	"prettier.trailingComma": "all",
+	"prettier.bracketSpacing": true,
+	"prettier.printWidth": 120
+}

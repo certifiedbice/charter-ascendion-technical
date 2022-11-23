@@ -1,5 +1,8 @@
 {
-  "release": {
-    "branches": ["master", "next"]
-  }
+	"release": {
+		"branches": [
+			"master",
+			"next"
+		]
+	}
 }

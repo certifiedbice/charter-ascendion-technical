@@ -22,6 +22,24 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Linting and Code Quality
+
+Run `lint:check` to scan the codebase for linting errors
+Run `lint:fix` to correct the linting errors within the codebase
+
+## Versioning
+
+`semantic-release` to correct the linting errors within the codebase
+
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<br>
+<br>
+
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-Angular-%23B52E31?style=flat?logo=angular)](https://github.com/semantic-release/semantic-release)
+
+[![typescript: angular](https://img.shields.io/badge/Typescript-Angular-%23B52E31?style=flat?logo=typescript)](https://angular.io)
+
+[![eslint: angular](https://img.shields.io/badge/eslint-Angular-%23B52E31?style=flat?logo=typescript)](https://eslint.org)
+
+[![code style: prettier](https://img.shields.io/badge/Code%20Style-Prettier-%2356B3B4?style=flat?logo=prettier)](https://prettier.io)

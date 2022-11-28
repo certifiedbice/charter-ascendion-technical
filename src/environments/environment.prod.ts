@@ -1,4 +1,4 @@
 export const environment = {
 	production: true,
-	GH_TOKEN: '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',
+	GH_TOKEN: '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',
 };

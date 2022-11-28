@@ -11,7 +11,11 @@
 		"lint:check": "eslint .",
 		"lint:fix": "eslint --fix .",
 		"semantic-release": "semantic-release",
-		"commit": "./node_modules/cz-customizable/standalone.js"
+		"commit": "./node_modules/cz-customizable/standalone.js",
+		"compodoc": "npx compodoc -p tsconfig.doc.json",
+		"compodoc:build": "compodoc -p tsconfig.doc.json",
+		"compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
+		"compodoc:serve": "compodoc -s"
 	},
 	"private": true,
 	"dependencies": {
@@ -28,6 +32,7 @@
 		"@angular/platform-browser": "^15.0.0",
 		"@angular/platform-browser-dynamic": "^15.0.0",
 		"@angular/router": "^15.0.0",
+		"@compodoc/compodoc": "^1.1.19",
 		"@typescript-eslint/eslint-plugin": "^5.44.0",
 		"@typescript-eslint/parser": "^5.44.0",
 		"dotenv": "^16.0.3",

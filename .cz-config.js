@@ -30,6 +30,7 @@ module.exports = {
 		{ name: 'Development' },
 		{ name: 'FrontEnd' },
 		{ name: 'BackEnd' },
+		{ name: 'Testing' },
 	],
 
 	usePreparedCommit: false, // to re-use commit from ./.git/COMMIT_EDITMSG

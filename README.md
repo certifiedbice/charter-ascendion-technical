@@ -15,10 +15,10 @@
 [![typescript](https://img.shields.io/badge/Typescript-%233178C6?style=flat?logo=typescript)](https://typescriptlang.org)
 [![webpack](https://img.shields.io/badge/Webpack-%238DD6F9?style=flat?logo=typescript)](https://webpack.js.org)
 
--   `"ng": "ng"` Register the ng command. <span style="color:red">\*</span>
--   Run `"build": "npm run config -- --environment=prod && ng build"` to build the project. The build artifacts will be stored in the `dist/` directory.<span style="color:red">\*</span>
--   Run `"serve": "npm run config -- --environment=dev && ng serve"` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.<span style="color:red">\*</span>
--   Run `"watch": "ng build --watch --configuration development"` to build the project. The build artifacts will be stored in the `dist/` directory.<span style="color:red">\*</span>
+-   `"ng": "ng"` Register the ng command. <span style="color:red;">\*</span>
+-   Run `"build": "npm run config -- --environment=prod && ng build"` to build the project. The build artifacts will be stored in the `dist/` directory.<span style="color:red;">\*</span>
+-   Run `"serve": "npm run config -- --environment=dev && ng serve"` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.<span style="color:red;">\*</span>
+-   Run `"watch": "ng build --watch --configuration development"` to build the project. The build artifacts will be stored in the `dist/` directory.<span style="color:red;">\*</span>
 
 ## Documentation
 
@@ -29,7 +29,7 @@
 -   `semantic-release` to correct the linting errors within the codebase<span style="color:red">\*</span>
 -   "commit": "./node_modules/cz-customizable/standalone.js"
 -   Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
--   "compodoc": "npx compodoc -p tsconfig.doc.json", <span style="color:red">\*</span>
+-   "compodoc": "npx compodoc -p tsconfig.doc.json", <span style="color:red;">\*</span>
 -   "compodoc:build": "compodoc -p tsconfig.doc.json",
 -   "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
 -   "compodoc:serve": "compodoc -s"
@@ -39,10 +39,10 @@
 [![eslint](https://img.shields.io/badge/ESLint-%234B32C3?style=flat?logo=typescript)](https://eslint.org)
 [![prettier](https://img.shields.io/badge/Prettier-%23F7B93E?style=flat?logo=prettier)](https://prettier.io)
 
--   "lint:check": "eslint ." <span style="color:red">\*</span>
--   "lint:fix": "eslint --fix ." <span style="color:red">\*</span>
--   "format:check": "prettier --check ." <span style="color:red">\*</span>
--   "format:write": "prettier --write ." <span style="color:red">\*</span>
+-   "lint:check": "eslint ." <span style="color:red;">\*</span>
+-   "lint:fix": "eslint --fix ." <span style="color:red;">\*</span>
+-   "format:check": "prettier --check ." <span style="color:red;">\*</span>
+-   "format:write": "prettier --write ." <span style="color:red;">\*</span>
 
 ## Testing
 
@@ -59,5 +59,5 @@
 
 ### Planned Updates
 
--   NOTE, not all commands are fully functional at this time. <span style="color:red">\* Denotes functioning commands</span>
+-   NOTE, not all commands are fully functional at this time. <span style="color:red;">\*</span> Denotes functioning commands
 -   StyleLint

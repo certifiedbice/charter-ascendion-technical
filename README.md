@@ -1,45 +1,63 @@
-# Technical
+# Charter / Ascendion - Technical Assessment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+## Author
 
-## Development server
+-   Bice
+-   https://bice.rocks
+-   https://resume.bice.rocks
+-   https://www.linkedin.com/in/certifiedbice
+-   https://github.com/certifiedbice
+-   https://github.com/certifiedbice/charter-ascendion-technical
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Application Framework
 
-## Code scaffolding
+[![angular](https://img.shields.io/badge/Angular-%23B52E31?style=flat?logo=angular)](https://angular.io)
+[![typescript](https://img.shields.io/badge/Typescript-%233178C6?style=flat?logo=typescript)](https://typescriptlang.org)
+[![webpack](https://img.shields.io/badge/Webpack-%238DD6F9?style=flat?logo=typescript)](https://webpack.js.org)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-   `"ng": "ng"` Register the ng command. <span style="color:red">\*</span>
+-   Run `"build": "npm run config -- --environment=prod && ng build"` to build the project. The build artifacts will be stored in the `dist/` directory.<span style="color:red">\*</span>
+-   Run `"serve": "npm run config -- --environment=dev && ng serve"` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.<span style="color:red">\*</span>
+-   Run `"watch": "ng build --watch --configuration development"` to build the project. The build artifacts will be stored in the `dist/` directory.<span style="color:red">\*</span>
 
-## Build
+## Documentation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[![semantic-release](https://img.shields.io/badge/semantic--release-%23DA107C?style=flat)](https://github.com/semantic-release/semantic-release)
+[![compodoc](https://img.shields.io/badge/Compodoc-%23F03848?style=flat?logo=prettier)](https://https://compodoc.app)
 
-## Running unit tests
+-   This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+-   `semantic-release` to correct the linting errors within the codebase<span style="color:red">\*</span>
+-   "commit": "./node_modules/cz-customizable/standalone.js"
+-   Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-   "compodoc": "npx compodoc -p tsconfig.doc.json", <span style="color:red">\*</span>
+-   "compodoc:build": "compodoc -p tsconfig.doc.json",
+-   "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
+-   "compodoc:serve": "compodoc -s"
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Code Quality
 
-## Running end-to-end tests
+[![eslint](https://img.shields.io/badge/ESLint-%234B32C3?style=flat?logo=typescript)](https://eslint.org)
+[![prettier](https://img.shields.io/badge/Prettier-%23F7B93E?style=flat?logo=prettier)](https://prettier.io)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+-   "lint:check": "eslint ." <span style="color:red">\*</span>
+-   "lint:fix": "eslint --fix ." <span style="color:red">\*</span>
+-   "format:check": "prettier --check ." <span style="color:red">\*</span>
+-   "format:write": "prettier --write ." <span style="color:red">\*</span>
 
-## Linting and Code Quality
+## Testing
 
-Run `lint:check` to scan the codebase for linting errors
-Run `lint:fix` to correct the linting errors within the codebase
+[![karma](https://img.shields.io/badge/Karma-%2342BEAE?style=flat?logo=jest)](https://karma-runner.github.io/latest/index.html)
+[![jasmin](https://img.shields.io/badge/Jasmin-%238A4182?style=flat?logo=jasmin)](https://jasmine.github.io/)
 
-## Versioning
+-   Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+-   Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-`semantic-release` to correct the linting errors within the codebase
+## UI
 
-## Further help
+[![sass](https://img.shields.io/badge/SASS-%23CC6699?style=flat?logo=sass)](https://sass-lang.com)
+[![fontawesome](https://img.shields.io/badge/FontAwesome-%23528DD7?style=flat?logo=fontawesome)](https://sass-lang.com)
 
-<br>
-<br>
+### Planned Updates
 
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-Angular-%23B52E31?style=flat?logo=angular)](https://github.com/semantic-release/semantic-release)
-
-[![typescript: angular](https://img.shields.io/badge/Typescript-Angular-%23B52E31?style=flat?logo=typescript)](https://angular.io)
-
-[![eslint: angular](https://img.shields.io/badge/eslint-Angular-%23B52E31?style=flat?logo=typescript)](https://eslint.org)
-
-[![code style: prettier](https://img.shields.io/badge/Code%20Style-Prettier-%2356B3B4?style=flat?logo=prettier)](https://prettier.io)
+-   NOTE, not all commands are fully functional at this time. <span style="color:red">\* Denotes functioning commands</span>
+-   StyleLint

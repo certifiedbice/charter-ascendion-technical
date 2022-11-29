@@ -1,0 +1,65 @@
+/* =================================
+MODAL ORGANISM STYLES
+==================================*/
+
+.modal-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: 100000;
+}
+#modal-container {
+	position: absolute;
+	aspect-ratio: 4/4;
+	aspect-ratio: 4/4;
+	aspect-ratio: 3/4;
+	// aspect-ratio: 8/12;
+	// aspect-ratio: 8/12;
+	// aspect-ratio: 6/12;
+}
+@media (min-width: 256px) {
+	// .modal-wrapper {
+	// 	width: 100vw;
+	// }
+}
+@media (min-width: 600px) {
+}
+#aligner {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	flex: 1;
+}
+.aligner-item {
+	flex: 1;
+}
+.modal-content {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	flex: 1;
+	border: none;
+	border-radius: 10px;
+	background-color: #ffffff;
+	text-align: center;
+}
+@media (min-width: 600px) {
+	.modal-content {
+		min-width: 90vw;
+		// max-height: 72%;
+		min-height: 84%;
+		// max-height: 90vw;
+		// max-height: 90vw;
+	}
+	#aligner div:first-child {
+		max-width: 5%;
+	}
+	#aligner div:last-child {
+		max-width: 5%;
+	}
+}

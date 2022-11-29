@@ -1,6 +1,6 @@
 # Charter / Ascendion - Technical Assessment
 
-## NOTE: Project is being finalized at the moment, expected ETA of final commit 30 mins, or (10:45 MST)
+## NOTE: Project is being finalized at the moment, css can be time consuming...
 
 ## The telling of the dev...
 

@@ -4,11 +4,11 @@ const ModalModel = {
 	 *
 	 * Model for defining an modal's parameters.
 	 */
-	id: 'modal01',
-	classList: ['modal'],
-	title: 'Test Modal 01',
+	actions: ['submit', 'cancel'],
 	body: 'Test Modal 01, Body text',
-	actions: ['action001', 'action002'],
+	classList: ['modal'],
+	id: 'modal01',
+	title: 'Test Modal 01',
 };
 
 export default ModalModel;

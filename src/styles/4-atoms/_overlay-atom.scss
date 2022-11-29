@@ -1,3 +1,23 @@
 /* =================================
 PAGE OVERLAY ATOM STYLES
 ==================================*/
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 100vh;
+	width: 100%;
+	z-index: 99999;
+	background-color: $OVERLAY_BACKGROUND_PRIMARY_DARK;
+	opacity: 0.9;
+}
+.overlay-hidden {
+	display: none;
+}
+.overlay-visible {
+	display: block;
+}
+.overlay-background-primary-dark {
+	background-color: $OVERLAY_BACKGROUND_PRIMARY_DARK;
+}

@@ -14,6 +14,10 @@ so please forgive anything I might have overlooked at this stage.
 
 Overall, I believe I have spent a little over 24 hours total on this so I hope you like it.
 
+One final note, as this project is something I have chosen to exploit to my advantage, I will be maintaining it for a short time
+before moving it to a different organization and into the application scaffold collections there. In the mean time... you are
+welcome to follow it for changes and updates as it evolves beyond the scope of this exercise.
+
 ## Author
 
 -   Bice

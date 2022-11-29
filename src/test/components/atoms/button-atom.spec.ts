@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonAtom } from '../../../components/button-atom';
+import { ButtonAtom } from '../../../components/atoms/button-atom';
 
 describe('ButtonAtom', () => {
 	let component: ButtonAtom;

@@ -1,5 +1,19 @@
 # Charter / Ascendion - Technical Assessment
 
+## NOTE: Project is being finalized at the moment, expected ETA of final commit 30 mins, or (10:45 MST)
+
+## The telling of the dev...
+
+Fun project, gave me the opportunity to get a jump on something that I have been planning for some time now actually...
+I am boilerplating multiple varieties of application scaffolds on both front and back ends for multiple use cases, all in
+an effort to expedite my product development and improve my project management.
+
+I believe this project covers all the bases for the technical spec, and satisfies the spirit of the exercise...
+although due to the holidays, and my own product launch I did not have as much time to dedicate to this as I would have liked,
+so please forgive anything I might have overlooked at this stage.
+
+Overall, I believe I have spent a little over 24 hours total on this so I hope you like it.
+
 ## Author
 
 -   Bice
@@ -61,3 +75,4 @@
 
 -   NOTE, not all commands are fully functional at this time. <span style="color:red;">\*</span> Denotes functioning commands
 -   StyleLint
+-   NGRX

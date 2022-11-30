@@ -9,31 +9,20 @@ MODAL ORGANISM STYLES
 	align-items: center;
 	align-content: center;
 	position: absolute;
+	top: 0;
+	left: 0;
 	height: 100vh;
 	width: 100vw;
 	z-index: 100000;
 }
-#modal-container {
-	position: absolute;
-	aspect-ratio: 4/4;
-	aspect-ratio: 4/4;
-	aspect-ratio: 3/4;
-	// aspect-ratio: 8/12;
-	// aspect-ratio: 8/12;
-	// aspect-ratio: 6/12;
-}
-@media (min-width: 256px) {
-	// .modal-wrapper {
-	// 	width: 100vw;
-	// }
-}
-@media (min-width: 600px) {
-}
-#aligner {
+#modal-flex-aligner {
 	display: flex;
 	flex-direction: column;
 	align-self: center;
 	flex: 1;
+	margin: 5% 0 5% 0;
+	width: 90vw;
+	aspect-ratio: 16/9;
 }
 .aligner-item {
 	flex: 1;
@@ -41,25 +30,45 @@ MODAL ORGANISM STYLES
 .modal-content {
 	display: flex;
 	flex-direction: column;
-	align-self: center;
-	flex: 1;
 	border: none;
-	border-radius: 10px;
 	background-color: #ffffff;
-	text-align: center;
+}
+.modal-title {
+	margin: 8px;
+}
+.modal-close-icon-wrapper {
+	float: right;
+	margin: 8px;
+}
+@media (min-width: 256px) {
+	#modal-flex-aligner {
+		margin: 0;
+		height: 100vh;
+		width: 100vw;
+	}
+	.modal-content {
+		border-radius: 0;
+	}
+	#modal-flex-aligner > div:first-child {
+		max-height: 0%;
+	}
+	#modal-flex-aligner > div:last-child {
+		max-height: 0%;
+	}
 }
 @media (min-width: 600px) {
+	#modal-flex-aligner {
+		margin: 5% 0 5% 0;
+		width: 90vw;
+		aspect-ratio: 16/9;
+	}
 	.modal-content {
-		min-width: 90vw;
-		// max-height: 72%;
-		min-height: 84%;
-		// max-height: 90vw;
-		// max-height: 90vw;
+		border-radius: 10px;
 	}
-	#aligner div:first-child {
-		max-width: 5%;
+	#modal-flex-aligner > div:first-child {
+		max-height: 5%;
 	}
-	#aligner div:last-child {
-		max-width: 5%;
+	#modal-flex-aligner > div:last-child {
+		max-height: 5%;
 	}
 }

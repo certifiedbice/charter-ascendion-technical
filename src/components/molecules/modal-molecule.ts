@@ -21,21 +21,23 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 	selector: 'modal-molecule',
 	template: `
 		<div id="{{ model.id }}" class="modal-wrapper">
-			<div id="aligner">
+			<div id="modal-flex-aligner">
 				<div class="aligner-item"></div>
-				<div class="modal-content aligner-item">
-					<div id="modal-container">
-						<div class="icon modal-close-icon-wrapper"><fa-icon [icon]="faCircleXmark"></fa-icon></div>
-						<div>{{ model.title }}</div>
-						<!-- hr to accomodate scrolling -->
-						<div>{{ model.body }}</div>
-						<div>
-							<!-- actions will be an array of buttons, the array will dictate the order of the buttons-->
-							<!-- actions -->
-							<!-- <button type="{{ type }}" id="{{ id }}" class="{{ class }}" name="{{ name }}" (click)="clickHandler()"> -->
-							<!-- {{ value }} -->
-							<!-- </button> -->
+				<div class="aligner-item modal-content">
+					<div class="modal-header">
+						<div class="icon modal-close-icon-wrapper">
+							<fa-icon [icon]="faCircleXmark"></fa-icon>
 						</div>
+						<div class="modal-title">{{ model.title }}</div>
+						<hr />
+					</div>
+					<div>{{ model.body }}</div>
+					<div>
+						<!-- actions will be an array of buttons, the array will dictate the order of the buttons-->
+						<!-- actions -->
+						<!-- <button type="{{ type }}" id="{{ id }}" class="{{ class }}" name="{{ name }}" (click)="clickHandler()"> -->
+						<!-- {{ value }} -->
+						<!-- </button> -->
 					</div>
 				</div>
 				<div class="aligner-item"></div>

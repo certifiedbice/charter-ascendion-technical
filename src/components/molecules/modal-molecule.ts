@@ -26,7 +26,7 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 				<div class="aligner-item modal-content">
 					<div class="modal-header">
 						<div class="icon modal-close-icon-wrapper">
-							<fa-icon [icon]="faCircleXmark"></fa-icon>
+							<fa-icon [icon]="faCircleXmark" (click)="clickHandler()" class="modal-close-icon"></fa-icon>
 						</div>
 						<div class="modal-title">{{ model.title }}</div>
 						<hr />
@@ -66,4 +66,13 @@ export class ModalMolecule
 	ngAfterViewChecked(): void {}
 	ngOnDestroy(): void {}
 	// Methods
+	clickHandler(): void {
+		/**
+		 * Description:
+		 *
+		 * Emits no actual value since toggle requires none
+		 *
+		 */
+		this.toggle.emit();
+	}
 }

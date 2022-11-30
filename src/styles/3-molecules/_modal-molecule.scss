@@ -40,6 +40,12 @@ MODAL ORGANISM STYLES
 	float: right;
 	margin: 8px;
 }
+.modal-close-icon {
+	cursor: pointer;
+}
+.modal-close-icon:hover {
+	color: $SECONDARY_DARK;
+}
 @media (min-width: 256px) {
 	#modal-flex-aligner {
 		margin: 0;

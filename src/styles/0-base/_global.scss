@@ -5,15 +5,22 @@ GLOBAL STYLES
 /* =================================
 BODY
 ==================================*/
-
 body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 	background-image: url(../../assets/images/the-dude-abides.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% 100vh;
+}
+body > div:first-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 }
 
 /* =================================
@@ -56,6 +63,12 @@ UNORDERED LISTS
 /* =================================
 ORDERED LISTS
 ==================================*/
+
+/* =================================
+ICONS
+==================================*/
+.icon {
+}
 
 /* =================================
 IMAGES

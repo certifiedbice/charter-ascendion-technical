@@ -15,7 +15,8 @@ import {
 import ModalModel from '../../../src/store/app/models/modal-model';
 // Interfaces
 import ModalModelInterface from '../../interfaces/modal-model.interface';
-
+// Icons
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 @Component({
 	selector: 'modal-molecule',
 	template: `
@@ -24,10 +25,12 @@ import ModalModelInterface from '../../interfaces/modal-model.interface';
 				<div class="aligner-item"></div>
 				<div class="modal-content aligner-item">
 					<div id="modal-container">
-						<div><!-- icon top right corner --></div>
+						<div class="icon modal-close-icon-wrapper"><fa-icon [icon]="faCircleXmark"></fa-icon></div>
 						<div>{{ model.title }}</div>
+						<!-- hr to accomodate scrolling -->
 						<div>{{ model.body }}</div>
 						<div>
+							<!-- actions will be an array of buttons, the array will dictate the order of the buttons-->
 							<!-- actions -->
 							<!-- <button type="{{ type }}" id="{{ id }}" class="{{ class }}" name="{{ name }}" (click)="clickHandler()"> -->
 							<!-- {{ value }} -->
@@ -52,6 +55,7 @@ export class ModalMolecule
 	classList: Array<string> = this.model.classList;
 	id: string = this.model.id;
 	title: string = this.model.title;
+	faCircleXmark = faCircleXmark;
 	// Life cycle hooks
 	ngOnInit(): void {}
 	ngAfterContentInit(): void {}

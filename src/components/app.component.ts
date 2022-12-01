@@ -18,7 +18,7 @@ import ButtonModel from '../../src/store/app/models/button-model';
 			<overlay-atom [overlay]="overlay">
 				<!-- Component ideally placed as the :nth-last-child(2) in the Body element, z-index assists here -->
 			</overlay-atom>
-			<modal-molecule *ngIf="modal">
+			<modal-molecule *ngIf="modal" (toggle)="buttonEmissionHandler()">
 				<!-- Component ideally placed as the :nth-last-child(2) in the Body element, z-index assists here -->
 			</modal-molecule>
 		</div>

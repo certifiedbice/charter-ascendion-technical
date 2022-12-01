@@ -13,10 +13,12 @@ import {
 } from '@angular/core';
 // Model
 import ModalModel from '../../../src/store/app/models/modal-model';
+import * as models from '../../../src/store/app/models/button-model';
 // Interfaces
 import ModalModelInterface from '../../interfaces/modal-model.interface';
 // Icons
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
 	selector: 'modal-molecule',
 	template: `
@@ -34,13 +36,17 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 						<div class="modal-title">{{ model.title }}</div>
 						<hr />
 					</div>
-					<div>{{ model.body }}</div>
-					<div>
-						<!-- actions will be an array of buttons, the array will dictate the order of the buttons-->
-						<!-- actions -->
-						<!-- <button type="{{ type }}" id="{{ id }}" class="{{ class }}" name="{{ name }}" (click)="clickHandler()"> -->
-						<!-- {{ value }} -->
-						<!-- </button> -->
+					<div class="modal-body">{{ model.body }}</div>
+					<div class="modal-actions">
+						<hr />
+						<div class="modal-actions-float-wrapper">
+							<!-- The actions array order will dictate the display order of buttons -->
+							<ng-template ngFor [ngForOf]="model.actions" let-input>
+								<button-atom
+									[button_data]="buttonModelSelector(input)"
+									(click)="buttonsClickHandler()"></button-atom>
+							</ng-template>
+						</div>
 					</div>
 				</div>
 				<div class="aligner-item last-aligner"></div>
@@ -54,6 +60,8 @@ export class ModalMolecule
 	constructor() {}
 	// Properties
 	@Output() toggle: EventEmitter<void> = new EventEmitter();
+	cancelButtonModel = models.CancelButtonModel;
+	submitButtonModel = models.SubmitButtonModel;
 	model: ModalModelInterface = ModalModel;
 	actions: Array<string> = this.model.actions;
 	body: string = this.model.body;
@@ -69,6 +77,18 @@ export class ModalMolecule
 	ngAfterViewChecked(): void {}
 	ngOnDestroy(): void {}
 	// Methods
+	buttonModelSelector(type: string) {
+		if (type === 'cancel') {
+			return this.cancelButtonModel;
+		} else if (type === 'submit') {
+			return this.submitButtonModel;
+		} else {
+			return {};
+		}
+	}
+	buttonsClickHandler(): void {
+		console.log('modal button click');
+	}
 	clickHandler(e: any): void {
 		/**
 		 * Description:
@@ -113,18 +133,19 @@ export class ModalMolecule
 		const pathDOMNodeNthParentNodeClassList = modalKillers.includes(e.target.nodeName)
 			? e.target.parentNode.parentNode.classList
 			: false;
-
-		if (pathDOMNodeNthParentNodeClassList) {
-			this.toggle.emit();
-		}
 		const classes = e.target.classList ? e.target.classList : false;
 		let classesCheck = false;
 		if (classes) {
 			classes.forEach((className: string) => {
+				const modalWrapper = document.getElementsByClassName('modal-wrapper')[0];
+				modalWrapper.classList.add('modal-fade-out');
 				classesCheck = modalKillers.includes(className) ? true : false;
 			});
-
-			classesCheck ? this.toggle.emit() : null;
 		}
+		setTimeout(() => {
+			if (pathDOMNodeNthParentNodeClassList || classesCheck) {
+				this.toggle.emit();
+			}
+		}, 150);
 	}
 }

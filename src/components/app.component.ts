@@ -9,7 +9,7 @@ import {
 	OnInit,
 } from '@angular/core';
 // Models
-import ButtonModel from '../../src/store/app/models/button-model';
+// import ButtonModel from '../../src/store/app/models/button-model'; // Commented out since button atom is also
 @Component({
 	selector: 'app-root',
 	template: `
@@ -40,7 +40,7 @@ export class AppComponent
 	constructor() {}
 	// Properties
 	title = 'technical';
-	buttonModel = ButtonModel;
+	// buttonModel = ButtonModel; // Commented out since button atom is also
 	overlay = false; // TODO: Move to NGRX
 	modal = false; // TODO: Move to NGRX
 	// Life cycle hooks

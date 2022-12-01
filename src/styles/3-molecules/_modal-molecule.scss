@@ -1,7 +1,6 @@
 /* =================================
 MODAL ORGANISM STYLES
 ==================================*/
-
 .modal-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -14,6 +13,33 @@ MODAL ORGANISM STYLES
 	height: 100vh;
 	width: 100vw;
 	z-index: 100000;
+	opacity: 0;
+	animation: modal-fade-in 250ms ease;
+}
+@keyframes modal-fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.modal-wrapper {
+	opacity: 1;
+}
+.modal-fade-out {
+	animation: modal-fade-out 250ms ease;
+}
+@keyframes modal-fade-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.modal-fade-out {
+	opacity: 0;
 }
 #modal-flex-aligner {
 	display: flex;
@@ -32,6 +58,10 @@ MODAL ORGANISM STYLES
 	border: none;
 	background-color: #ffffff;
 }
+.modal-header {
+	flex: 1;
+	max-height: 40px;
+}
 .modal-title {
 	margin: 8px;
 }
@@ -44,6 +74,24 @@ MODAL ORGANISM STYLES
 }
 .modal-close-icon:hover {
 	color: $SECONDARY_DARK;
+}
+.modal-body {
+	flex: 1;
+	padding: 8px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.modal-actions {
+	flex: 1;
+	max-height: 48px;
+}
+.modal-actions-float-wrapper > * {
+	display: inline-block;
+	margin: 0 8px 0 0;
+}
+.modal-actions-float-wrapper {
+	float: right;
+	margin: 0 0 0 8px;
 }
 @media (min-width: 256px) {
 	#modal-flex-aligner {

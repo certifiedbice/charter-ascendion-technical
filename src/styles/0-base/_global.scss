@@ -22,16 +22,13 @@ body > div:first-child {
 	width: 100vw;
 	height: 100vh;
 }
-
 /* =================================
 MAIN
 ==================================*/
-
 main {
 	height: 100%;
 	width: 100%;
 }
-
 /* =================================
 WRAPPERS
 ==================================*/
@@ -69,7 +66,6 @@ ICONS
 ==================================*/
 .icon {
 }
-
 /* =================================
 IMAGES
 ==================================*/
@@ -77,3 +73,84 @@ IMAGES
 /* =================================
 FORMS
 ==================================*/
+
+/* =================================
+Slider
+==================================*/
+.slider-wrapper {
+	height: 100vh;
+	width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 4rem;
+	color: #f1faee;
+	animation: slide-wrapper 1s;
+}
+h1 {
+	text-align: center;
+	font-size: 4rem;
+	color: #f1faee;
+}
+.slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	height: 4.125rem;
+	width: 100%;
+	line-height: 4rem;
+}
+.slider-content {
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	text-transform: uppercase;
+	opacity: 0;
+	animation: slide 5s infinite;
+}
+#that-rug-really-tied-the-room-together {
+	margin-top: 0;
+	font-size: 3rem;
+	font-style: italic;
+	letter-spacing: 1rem;
+	color: #a8dadc;
+}
+@keyframes slide-wrapper {
+	0% {
+		transform: translateX(200%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+@keyframes slide {
+	0% {
+		top: 0;
+		opacity: 0;
+	}
+	20% {
+		top: 0;
+		opacity: 0;
+	}
+	40% {
+		top: 0;
+		opacity: 1;
+	}
+	60% {
+		top: -4rem;
+		opacity: 1;
+	}
+	80% {
+		top: -8rem;
+		opacity: 1;
+	}
+	99% {
+		top: -12.25rem;
+	}
+	100% {
+		opacity: 0;
+		top: 0;
+	}
+}

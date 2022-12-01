@@ -44,7 +44,7 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 							<ng-template ngFor [ngForOf]="model.actions" let-input>
 								<button-atom
 									[button_data]="buttonModelSelector(input)"
-									(click)="buttonsClickHandler()"></button-atom>
+									(click)="buttonsClickHandler($event)"></button-atom>
 							</ng-template>
 						</div>
 					</div>
@@ -78,6 +78,9 @@ export class ModalMolecule
 	ngOnDestroy(): void {}
 	// Methods
 	buttonModelSelector(type: string) {
+		/**
+		 * Selects the model for the button atom
+		 */
 		if (type === 'cancel') {
 			return this.cancelButtonModel;
 		} else if (type === 'submit') {
@@ -86,7 +89,10 @@ export class ModalMolecule
 			return {};
 		}
 	}
-	buttonsClickHandler(): void {
+	buttonsClickHandler(e: object): void {
+		/**
+		 * Click handler for model loaded buttons
+		 */
 		console.log('modal button click');
 	}
 	clickHandler(e: any): void {
@@ -120,6 +126,17 @@ export class ModalMolecule
 		 *
 		 * if true, emit
 		 */
+		if (
+			e.target.classList.contains('button') ||
+			e.target.parentNode.classList.contains('aligner-item') ||
+			e.target.parentNode.parentNode.classList.contains('aligner-item')
+		) {
+			/**
+			 * Fix for a button/element click on the modal-wrapper/elements/buttons closing modal
+			 * // TODO: Correct and better it ;)
+			 */
+			return;
+		}
 		const modalKillers = [
 			'first-aligner',
 			'last-aligner',

@@ -5,18 +5,49 @@ PAGE OVERLAY ATOM STYLES
 	position: absolute;
 	top: 0;
 	left: 0;
-	display: block;
 	height: 100vh;
 	width: 100%;
 	z-index: 99999;
 	background-color: $OVERLAY_BACKGROUND_PRIMARY_DARK;
+	opacity: 0;
+	display: none;
+}
+.overlay-hidden {
+	animation: overlay-fade-out 250ms ease-out;
+	display: block;
 	opacity: 0.9;
+}
+@keyframes overlay-fade-out {
+	0% {
+		display: block;
+		opacity: 0.9;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 .overlay-hidden {
 	display: none;
+	opacity: 0;
+}
+
+.overlay-visible {
+	animation: overlay-fade-in 250ms ease;
+	display: block;
+	opacity: 0.9;
+}
+@keyframes overlay-fade-in {
+	0% {
+		display: block;
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.9;
+	}
 }
 .overlay-visible {
 	display: block;
+	opacity: 0.9;
 }
 .overlay-background-primary-dark {
 	background-color: $OVERLAY_BACKGROUND_PRIMARY_DARK;

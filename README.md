@@ -18,7 +18,7 @@ I believe this project covers all the bases for the technical spec, and satisfie
 although due to the holidays, and my own product launch I did not have as much time to dedicate to this as I would have liked,
 so please forgive anything I might have overlooked at this stage.
 
-Overall, I believe I have spent a little over 24 hours total on this so I hope you like it.
+Overall, I believe I have spent a little over 36 hours total on this so I hope you like it.
 
 One final note, since this project is something I have chosen to exploit to my advantage, I will be maintaining it for a short time
 before moving it to a different organization and into the application scaffold collections there. In the mean time... you are

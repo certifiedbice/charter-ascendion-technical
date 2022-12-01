@@ -14,12 +14,22 @@ import ButtonModel from '../../src/store/app/models/button-model';
 	selector: 'app-root',
 	template: `
 		<div>
-			<button-atom [button_data]="buttonModel" (toggle)="buttonEmissionHandler()"></button-atom>
+			<div class="slider-wrapper" (click)="buttonEmissionHandler()">
+				<h1>The dude abides...</h1>
+				<div class="slider">
+					<div class="slider-content">
+						<div>Clicks...</div>
+						<div>Anywhere,</div>
+						<div id="that-rug-really-tied-the-room-together">man</div>
+					</div>
+				</div>
+			</div>
+			<!-- <button-atom [button_data]="buttonModel" (toggle)="buttonEmissionHandler()"></button-atom> -->
 			<overlay-atom [overlay]="overlay">
 				<!-- Component ideally placed as the :nth-last-child(2) in the Body element, z-index assists here -->
 			</overlay-atom>
 			<modal-molecule *ngIf="modal" (toggle)="buttonEmissionHandler()">
-				<!-- Component ideally placed as the :nth-last-child(2) in the Body element, z-index assists here -->
+				<!-- Component ideally placed as the :nth-last-child(1) in the Body element, z-index assists here -->
 			</modal-molecule>
 		</div>
 	`,
